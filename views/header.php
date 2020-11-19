@@ -11,15 +11,10 @@
 
     <script src="https://kit.fontawesome.com/36576a59cf.js" crossorigin="anonymous"></script>
 
-    <!-- <script>
-        window.onload = () => {
-            document.getElementById('input-zip').focus().select();
-        }
-    </script> -->-
 </head>
 <body>
 
 <div id="header-container">
-    <img id="weather-image" src="images\meteorology-weather.jpg">
+    <i id="weather-img" class="fas fa-cloud-sun fa-5x"></i>
     <h2 id="title">Weather Zip</h2>
 </div>
