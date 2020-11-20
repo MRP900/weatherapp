@@ -82,7 +82,7 @@ function get_weather ($zip) {
 			try {
 				add_search($results['city'], $results['state'], $zip);
 			} catch (PDOException $e) {
-				$results['error'] = $e->getMessage();
+				$results['db_error'] = $e->getMessage();
 				return $results;
 			}
 			
@@ -228,7 +228,7 @@ function  get_top_results() {
 		return $results;
 	}
 	catch (PDOException $e) {
-		$results['error'] = "Could not return top results, " . $e;
+		$results['db_error'] = "Could not return top results";
 		$results['success'] = false;
 		return $results;
 	}
@@ -259,7 +259,9 @@ function add_search($city, $state, $zip) {
 		$stmt->closeCursor();
 	}
 	catch (PDOException $e) {
-
+		$results['db_error'] = "Could not add search to database";
+		$results['success'] = false;
+		return $results;
 	}
 	
 }

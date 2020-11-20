@@ -30,9 +30,13 @@
                     echo '<noscript><input type="submit" value="Submit"></noscript>';
                     echo '</form>';
                 }
-            ?>
             
-            <?php
+            // Display database errors
+            if (!empty($recentSearches['db_error'])) {
+                echo '<p class="alert-danger" id="error">'. "Could not connect to database: " . $recentSearches['db_error'] . '</p>';
+            }
+
+            // Display Search related errors
             if (!empty($weatherOut['error'])) {
                 echo '<p class="alert-danger" id="error">' . $weatherOut['error'] . '</p>';
             } 
