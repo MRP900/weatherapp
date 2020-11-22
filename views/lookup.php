@@ -41,8 +41,8 @@
                 echo '<p class="alert-danger" id="error">' . $weatherOut['error'] . '</p>';
             } 
             elseif (!empty($weatherOut)) {
-                echo '<h4>Current Weather for ' . $weatherOut['city'] . ', '. $weatherOut['state'] . ' ' . 
-                $weatherOut['zip'] . '</h4>';
+                echo '<h5>Current Weather for ' . $weatherOut['city'] . ', '. $weatherOut['state'] . ' ' . 
+                $weatherOut['zip'] . '</h5>';
                 echo '<div id="results-container">';
                 echo '<div class="weather-elements"><i class="fas fa-temperature-high" alt="temperature"></i> ' . $weatherOut['tempf'] . '&#8457;</div>';
                 echo '<div class="weather-elements"><i class="fas fa-tint"></i> ' . $weatherOut['humidity'] . '</div>';

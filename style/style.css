@@ -76,6 +76,8 @@ li {
     flex-wrap: wrap;
     border: .2em solid black;
     align-items: center;
+    border-radius: 15px;
+    font-weight: 600;
 }
 
 /* .weather-elements {

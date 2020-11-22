@@ -16,5 +16,5 @@
 
 <div id="header-container">
     <i id="weather-img" class="fas fa-cloud-sun fa-5x"></i>
-    <h2 id="title">Weather Zip</h2>
+    <h3 id="title">Weather Zip</h3>
 </div>

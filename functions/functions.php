@@ -1,4 +1,5 @@
 <?php
+include "dbconnect.php";
 
 function get_weather ($zip) {
 	// Array of weather attributes converted from json
@@ -205,15 +206,8 @@ function get_state($zip) {
 
 // Return list of user searches - Top 5
 function  get_top_results() {
-	// Connect to database
-    $user = "root";
-    $pass = "";
-	$host = "localhost";
-	$dbName = "weather";
-    $dsn = "mysql:host=".$host.";dbname=".$dbName;
-
 	try {
-		$db = new PDO($dsn, $user, $pass);
+		$db = db_connect();
 
 		// Get results
 		$stmt = $db->prepare("SELECT city, state, zip, MAX(date) as date
@@ -229,7 +223,6 @@ function  get_top_results() {
 	}
 	catch (PDOException $e) {
 		$results['db_error'] = "Could not return top results";
-		$results['success'] = false;
 		return $results;
 	}
     
@@ -237,15 +230,8 @@ function  get_top_results() {
 
 // Add user searches to db
 function add_search($city, $state, $zip) {
-	// Connect to database
-    $user = "root";
-    $pass = "";
-	$host = "localhost";
-	$dbName = "weather";
-    $dsn = "mysql:host=".$host.";dbname=".$dbName;
-
 	try {
-		$db = new PDO($dsn, $user, $pass);
+		$db = db_connect();
 	
 		// insert search result into db
 		$stmt = $db->prepare("INSERT INTO searches 
@@ -260,7 +246,6 @@ function add_search($city, $state, $zip) {
 	}
 	catch (PDOException $e) {
 		$results['db_error'] = "Could not add search to database";
-		$results['success'] = false;
 		return $results;
 	}
 	
