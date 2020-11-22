@@ -44,9 +44,9 @@
                 echo '<h4>Current Weather for ' . $weatherOut['city'] . ', '. $weatherOut['state'] . ' ' . 
                 $weatherOut['zip'] . '</h4>';
                 echo '<div id="results-container">';
-                echo '<div class="weather-elements"><p><i class="fas fa-temperature-high" alt="temperature"></i> ' . $weatherOut['tempf'] . '&#8457;</p></div>';
-                echo '<div class="weather-elements"><p class="weather-elements"><i class="fas fa-tint"></i> ' . $weatherOut['humidity'] . '</p></div>';
-                echo '<div class="weather-elements"><p class="weather-elements"><i class="fas fa-wind"></i> ' . $weatherOut['wind'] . '</p></div>';
+                echo '<div class="weather-elements"><i class="fas fa-temperature-high" alt="temperature"></i> ' . $weatherOut['tempf'] . '&#8457;</div>';
+                echo '<div class="weather-elements"><i class="fas fa-tint"></i> ' . $weatherOut['humidity'] . '</div>';
+                echo '<div class="weather-elements"><i class="fas fa-wind"></i> ' . $weatherOut['wind'] . '</div>';
                 echo '</div>';
             }
             ?>
