@@ -15,6 +15,11 @@
             </form>
 
             <?php
+                if(isset($_COOKIE['searched'])) {
+                    echo 'Searches: ' . $_COOKIE['searched'];
+                }
+                
+
                 if(!isset($recentSearches["success"])){
                     echo '<form id="recent-select" action="." method="post">';
                     echo '<select name="zip" onchange="this.form.submit()">';

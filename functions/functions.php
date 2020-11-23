@@ -223,6 +223,7 @@ function  get_top_results() {
 	}
 	catch (PDOException $e) {
 		$results['db_error'] = "Could not return top results";
+		$results['success'] = false;
 		return $results;
 	}
     

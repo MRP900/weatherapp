@@ -1,5 +1,7 @@
 <?php
 include 'functions/functions.php';
+// Set and handle cookie
+
 
 // Get last 5 searches from db
 $recentSearches = get_top_results();
@@ -17,7 +19,11 @@ if (isset($_POST['action'])) {
 if ($action === 'show-weather') {
 	$zip = filter_input(INPUT_POST, 'zip', FILTER_SANITIZE_STRING);
 	$weatherOut = get_weather($zip);
+	if(!isset($weatherOut['error'])){
+		
+	}
 	$recentSearches = get_top_results();
+	
 	include 'views/lookup.php';
 }
 // Display Default Page
