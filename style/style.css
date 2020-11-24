@@ -128,7 +128,7 @@ li {
         width: 100%;
         align-items: flex-end;
         margin-bottom: 1.5em;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     #input {
         width: 44%;

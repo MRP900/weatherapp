@@ -226,7 +226,6 @@ function  get_top_results() {
 		$results['success'] = false;
 		return $results;
 	}
-    
 }
 
 // Add user searches to db
