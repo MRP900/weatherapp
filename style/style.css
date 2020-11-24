@@ -2,15 +2,18 @@ body {
     background-color: rgb(125, 206, 243) !important; 
 }
 
+form {
+    border: 2px solid black;
+}
+
 /* Image container */
 #header-container {
     width: 30%;
-    margin: .25em auto;
+    margin: .5em auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
 }
 #weather-img {
     display: block;
@@ -35,7 +38,8 @@ body {
     margin: 1em auto;
 }
 #input-zip {
-    width: 25%;
+    display: block;
+    width: 30%;
     margin: .5em auto;
     border-radius: 5px;
     text-align: center; 
@@ -51,6 +55,7 @@ input:focus::placeholder {
 .btn {
     margin: .5em auto .25em auto;
     border-radius: .25em;
+    display: block;
 }
 
 /* Recent searches */
@@ -61,7 +66,9 @@ input:focus::placeholder {
     text-align: center;
 }
 #recent-select {
-    margin-bottom: .5em;
+    display: block;
+    margin: .5em auto;
+    
 }
 
 ul {
@@ -76,7 +83,7 @@ li {
 
 /* Output/Errors */
 
-.current-header {
+#current-header {
     width: 80%;
     margin: .5em auto;
     text-align: center;
