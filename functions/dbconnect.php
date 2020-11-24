@@ -1,7 +1,6 @@
 <?php
 
     function db_connect () {
-        // For offline connection
         $user = "root";
         $pass = "";
         $host = "localhost";
@@ -14,7 +13,7 @@
             $user = $array["user"];
             $pass = $array["pass"];
             $host = $array["host"];
-            $dbName = $array["weather"];
+            $dbName = $array["dbName"];
         }
         
         $dsn = "mysql:host=".$host.";dbname=".$dbName;
