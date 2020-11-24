@@ -1,35 +1,35 @@
 <?php include 'header.php'; ?>
 
 
+
 <div id="forms">
     <form id="input" action="." method="post">
-        <input id="input-zip" type="text" name="zip" placeholder="Enter Zip Code Here">
+        <input id="input-zip" type="text" name="zip" placeholder="Enter Zip Code">
 
         <div id="submit-group">
             <input type="hidden" name="action" value="show-weather">
-            <input type="submit" value="Display Weather" class="input-btn">
+            <input type="submit" value="Display" class="input-btn">
         </div>
     </form>
 
     <?php
         if(!isset($recentSearches["success"])){
-            echo '<div id="recent-searches">';
-                echo '<form id="recent-select" action="." method="post">';
-                    echo '<select name="zip" onchange="this.form.submit()">';
-                        echo '<option id="recent-header">' . "Recent Searches" . '</option>';
-                        foreach ($recentSearches as $recent) {
-                            echo '<option value="' . $recent["zip"] . '">' .
-                            $recent["city"] . " " . $recent["state"] . ", " . $recent["zip"] .   
-                            '</option>';
-                        }
-                    echo "</select>";
-                    
-                    echo '<input type="hidden" name="action" value="show-weather">';
-                    echo '<noscript><input type="submit" value="Submit"></noscript>';
-                echo '</form>';
-            echo '</div>';
+            echo '<form id="recent-select" action="." method="post">';
+            echo '<select name="zip" onchange="this.form.submit()">';
+            echo '<option id="recent-header">' . "Recent Searches" . '</option>';
+            foreach ($recentSearches as $recent) {
+            echo '<option value="' . $recent["zip"] . '">' .
+            $recent["city"] . " " . $recent["state"] . ", " . $recent["zip"] .   
+            '</option>';
+            }
+            echo "</select>";
+            
+            echo '<input type="hidden" name="action" value="show-weather">';
+            echo '<noscript><input type="submit" value="Submit"></noscript>';
+            echo '</form>';
         }
     ?>
+</div>
 </div>
 
 <?php
