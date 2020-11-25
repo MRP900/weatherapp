@@ -2,7 +2,7 @@
 
 
 
-<div id="forms">
+<div id="forms" class="form-group align-content-center">
     <form id="input" action="." method="post">
         <input id="input-zip" type="text" name="zip" placeholder="Enter Zip Code">
 
