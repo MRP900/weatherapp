@@ -7,9 +7,14 @@ body {
 } */
 
 /* Image container */
+#flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
 #header-container {
     width: 40%;
-    margin: auto;
+    margin: 1em auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +39,8 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    justify-items: center;
+    
 }
 .input {
     width: 95%;
@@ -57,7 +63,7 @@ input:focus::placeholder {
     
 }
 .input-btn {
-    margin: .5em auto .25em auto;
+    margin: .5em auto .5em auto;
     border-radius: .25em;
     display: block;
 }
@@ -70,7 +76,7 @@ input:focus::placeholder {
 #recent-select {
     width: 85%;
     display: block;
-    margin: .5em auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -125,8 +131,8 @@ li {
     }
     #flex-container {
         /* border: 2px solid black; */
-        width: 99%;
-        display: inline-flex;
+        width: 100%;
+        display: flex;
         flex-direction: row;
     }
     #forms {
@@ -137,6 +143,8 @@ li {
         align-items: flex-end;
         margin-bottom: 1.5em;
         justify-content: space-evenly;
+        /* align-items: center; */
+        align-content: center;
     }
     #input {
         width: 50%;
